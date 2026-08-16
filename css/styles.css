@@ -198,6 +198,45 @@ hr{
    LISTA NEGRA
 =========================================== */
 
-.lista-negra{
-    color:#000000;
+/* ===========================================
+   7 ÁREAS CLAVE
+=========================================== */
+
+.areas-clave{
+    background-color:#4E2463;
+    border-left:5px solid #D4AF37;
+    border-radius:10px;
+    padding:20px 25px 20px 50px;
+    margin:25px 0;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ===========================================
+   ELEMENTOS DE LA LISTA
+=========================================== */
+
+.areas-clave li{
+    color:#FFFFFF;
+    padding:10px 15px;
+    margin:8px 0;
+    text-shadow:1px 1px 3px #8B7500;
+    border-bottom:1px solid #B08D57;
+}
+
+/* ===========================================
+   ÚLTIMO ELEMENTO
+=========================================== */
+
+.areas-clave li:last-child{
+    border-bottom:none;
+}
+
+/* ===========================================
+   EFECTO AL PASAR EL CURSOR
+=========================================== */
+
+.areas-clave li:hover{
+    color:#D4AF37;
+    padding-left:20px;
+    transition:0.3s;
 }
