@@ -198,3 +198,28 @@ section{
 hr{
     border:2px solid #D4AF37;
 }
+
+/* ===========================================
+   HISTORIA DEL METRO
+=========================================== */
+
+.historia-metro{
+    color:#C97A5A;
+}
+
+.historia-metro p{
+    color:#C97A5A;
+    text-shadow:2px 2px 4px #7A4938;
+}
+
+/* ===========================================
+   TÍTULO DE LA HISTORIA DEL METRO
+=========================================== */
+
+.historia-metro p:first-child{
+    font-size:24px;
+    font-weight:bold;
+    text-align:left;
+    border-bottom:2px solid #C97A5A;
+    padding-bottom:8px;
+}
