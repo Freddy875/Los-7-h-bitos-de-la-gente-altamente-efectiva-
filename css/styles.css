@@ -272,3 +272,66 @@ hr{
     font-size:14px;
     text-shadow:1px 1px 2px #8B7500;
 }
+
+/* ===========================================
+   SECCIÓN MENTALIDAD DE GANAR-GANAR
+=========================================== */
+
+.seccion-ganar-ganar{
+    background-color:#382044;
+    border:2px solid #D4AF37;
+    border-radius:15px;
+    padding:25px;
+    margin:35px 0;
+    box-shadow:0 6px 15px rgba(0,0,0,0.35);
+    transition:0.4s;
+}
+
+/* ===========================================
+   TÍTULO GANAR-GANAR
+=========================================== */
+
+.ganar-ganar-titulo{
+    color:#D4AF37;
+    font-size:28px;
+    font-weight:bold;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    text-shadow:2px 2px 4px #8B7500;
+    border-bottom:2px solid #B08D57;
+    padding-bottom:12px;
+}
+
+/* ===========================================
+   TEXTO DE GANAR-GANAR
+=========================================== */
+
+.seccion-ganar-ganar p:not(.ganar-ganar-titulo){
+    color:#FFFFFF;
+    text-shadow:1px 1px 3px #8B7500;
+}
+
+/* ===========================================
+   EFECTO HOVER DE TODA LA SECCIÓN
+=========================================== */
+
+.seccion-ganar-ganar:hover{
+    background-color:#5F2D79;
+    border-color:#C97A5A;
+    box-shadow:0 8px 20px rgba(201,122,90,0.45);
+}
+
+/* ===========================================
+   CAMBIO DE COLOR DEL CONTENIDO AL HOVER
+=========================================== */
+
+.seccion-ganar-ganar:hover .ganar-ganar-titulo{
+    color:#FFFFFF;
+    border-color:#C97A5A;
+    text-shadow:2px 2px 4px #7A4938;
+}
+
+.seccion-ganar-ganar:hover p:not(.ganar-ganar-titulo){
+    color:#D4AF37;
+}
