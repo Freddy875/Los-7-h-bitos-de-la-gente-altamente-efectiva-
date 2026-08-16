@@ -243,27 +243,32 @@ hr{
 }
 
 /* ===========================================
-<<<<<<< HEAD
-   HISTORIA DEL METRO
+   LISTA DE CÍRCULOS
 =========================================== */
 
-.historia-metro{
-    color:#C97A5A;
+.circulos{
+    list-style:none;
+    padding-left:20px;
+    margin:20px 0;
 }
 
-.historia-metro p{
-    color:#C97A5A;
-    text-shadow:2px 2px 4px #7A4938;
+.circulos li{
+    color:#5DADE2;
+    margin:12px 0;
+    padding-left:25px;
+    position:relative;
+    text-shadow:1px 1px 3px #1F4E79;
 }
 
 /* ===========================================
-   TÍTULO DE LA HISTORIA DEL METRO
+   ROMBO DORADO
 =========================================== */
 
-.historia-metro p:first-child{
-    font-size:24px;
-    font-weight:bold;
-    text-align:left;
-    border-bottom:2px solid #C97A5A;
-    padding-bottom:8px;
+.circulos li::before{
+    content:"◆";
+    color:#D4AF37;
+    position:absolute;
+    left:0;
+    font-size:14px;
+    text-shadow:1px 1px 2px #8B7500;
 }
