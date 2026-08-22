@@ -335,3 +335,76 @@ hr{
 .seccion-ganar-ganar:hover p:not(.ganar-ganar-titulo){
     color:#D4AF37;
 }
+
+/* ===========================================
+   4 FORMAS DE MANTENER RELACIONES EXCELENTES
+=========================================== */
+
+.relaciones-excelentes{
+    list-style:none;
+    counter-reset:relaciones;
+    padding:10px 0;
+    margin:30px 0;
+}
+
+/* ===========================================
+   ELEMENTOS DE LA LISTA
+=========================================== */
+
+.relaciones-excelentes li{
+    counter-increment:relaciones;
+    position:relative;
+    color:#3B2147;
+    background-color:#D4AF37;
+    padding:18px 25px 18px 70px;
+    margin:0;
+    border-bottom:2px solid #B08D57;
+    line-height:1.7;
+    transition:0.3s ease;
+}
+
+/* ===========================================
+   NUMERACIÓN
+=========================================== */
+
+.relaciones-excelentes li::before{
+    content:counter(relaciones);
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    width:35px;
+    height:35px;
+    border:2px solid #FFFFFF;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#FFFFFF;
+    font-weight:bold;
+    background-color:#7B3FA0;
+    box-shadow:0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* ===========================================
+   TEXTO DESTACADO
+=========================================== */
+
+.relaciones-excelentes strong{
+    color:#7B3FA0;
+}
+
+/* ===========================================
+   EFECTO HOVER
+=========================================== */
+
+.relaciones-excelentes li:hover{
+    background-color:#E6C85C;
+    padding-left:78px;
+    border-bottom-color:#7B3FA0;
+}
+
+.relaciones-excelentes li:hover::before{
+    background-color:#C97A5A;
+    border-color:#FFFFFF;
+}
