@@ -486,4 +486,146 @@ hr{
     transform:translateY(-50%) rotate(360deg);
 }
 
+/* ===========================================
+   PUNTO CLAVE 8: AFILA LA SIERRA
+=========================================== */
 
+#capitulo8{
+    background-color:#5F2D79;
+    border:2px solid #D4AF37;
+    border-radius:20px;
+    padding:35px;
+    margin:40px 0;
+    box-shadow:0 8px 20px rgba(0,0,0,0.35);
+}
+
+
+/* ===========================================
+   ARTÍCULO SIN CUADRO INTERNO
+=========================================== */
+
+#capitulo8 article{
+    background:none;
+    border:none;
+    box-shadow:none;
+    padding:0;
+    margin:0;
+}
+
+
+/* ===========================================
+   TÍTULO DEL PUNTO CLAVE 8
+=========================================== */
+
+#capitulo8 h2{
+    color:#D4AF37;
+    font-size:32px;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    text-shadow:2px 2px 4px #8B7500;
+    margin-top:0;
+    margin-bottom:30px;
+}
+
+
+/* ===========================================
+   PÁRRAFOS
+=========================================== */
+
+#capitulo8 p{
+    color:#FFFFFF;
+    font-size:18px;
+    text-shadow:1px 1px 3px #8B7500;
+    margin-bottom:20px;
+}
+
+
+/* ===========================================
+   LISTA DE LAS 4 DIMENSIONES
+=========================================== */
+
+#capitulo8 ol{
+    list-style:none;
+    padding:0;
+    margin:30px 0;
+    counter-reset:dimension;
+}
+
+
+#capitulo8 ol li{
+    counter-increment:dimension;
+    position:relative;
+    background-color:#382044;
+    border-left:4px solid #D4AF37;
+    border-radius:10px;
+    padding:18px 20px 18px 65px;
+    margin-bottom:15px;
+    color:#FFFFFF;
+    text-shadow:1px 1px 3px #8B7500;
+    transition:0.4s;
+}
+
+
+/* NÚMERO DE CADA DIMENSIÓN */
+
+#capitulo8 ol li::before{
+    content:counter(dimension);
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    width:35px;
+    height:35px;
+    border:2px solid #D4AF37;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#D4AF37;
+    font-weight:bold;
+}
+
+
+/* ===========================================
+   HOVER DE LAS DIMENSIONES
+=========================================== */
+
+#capitulo8 ol li:hover{
+    background-color:#1F3A5F;
+    border-left-color:#FFFFFF;
+    transform:translateX(10px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.35);
+}
+
+
+#capitulo8 ol li:hover::before{
+    background-color:#D4AF37;
+    color:#382044;
+}
+
+
+/* ===========================================
+   PALABRAS PRINCIPALES
+=========================================== */
+
+#capitulo8 strong{
+    color:#D4AF37;
+}
+
+
+/* ===========================================
+   CITA FINAL
+=========================================== */
+
+#capitulo8 blockquote{
+    background-color:#382044;
+    border-left:6px solid #D4AF37;
+    border-radius:8px;
+    padding:20px;
+    margin:30px 0 0 0;
+    color:#D4AF37;
+    font-size:20px;
+    font-style:italic;
+    text-shadow:1px 1px 3px #8B7500;
+}
