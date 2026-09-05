@@ -614,48 +614,60 @@ hr{
 }
 
 /* ===========================================
-   CITA FINAL - ESTILO DESTACADO
+   CITA FINAL - REFLEXIÓN DESTACADA
 =========================================== */
 
 #capitulo8 blockquote{
     position:relative;
-    margin:45px auto 20px;
-    padding:25px 50px;
-    max-width:800px;
-    color:#D4AF37;
-    font-size:22px;
+    margin:50px auto 25px;
+    padding:35px 45px;
+    max-width:850px;
+
+    background-color:#1F3A5F;
+    color:#FFFFFF;
+
+    font-size:21px;
     font-style:italic;
     text-align:center;
-    line-height:1.7;
-    text-shadow:1px 1px 3px #8B7500;
+    line-height:1.8;
+
+    border:2px solid #C97A5A;
+    border-radius:25px 5px 25px 5px;
+
+    box-shadow:8px 8px 0 #D4AF37;
+
+    text-shadow:1px 1px 3px #000000;
 }
 
 
-/* COMILLA DECORATIVA */
+/* ===========================================
+   SÍMBOLO DE CITA
+=========================================== */
 
 #capitulo8 blockquote::before{
     content:"❝";
-    display:block;
-    color:#D4AF37;
-    font-size:55px;
-    line-height:0.8;
-    margin-bottom:15px;
-}
 
+    position:absolute;
+    top:-30px;
+    left:50%;
 
-/* LÍNEA SUPERIOR */
+    transform:translateX(-50%);
 
-#capitulo8 blockquote{
-    border-top:2px solid #D4AF37;
-    border-bottom:2px solid #D4AF37;
-}
+    width:60px;
+    height:60px;
 
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-/* HOVER SUAVE */
+    background-color:#D4AF37;
+    color:#382044;
 
-#capitulo8 blockquote:hover{
-    color:#FFFFFF;
-    text-shadow:2px 2px 5px #D4AF37;
-    transform:scale(1.02);
-    transition:0.4s;
+    border:3px solid #C97A5A;
+    border-radius:50%;
+
+    font-size:42px;
+    font-style:normal;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.35);
 }
