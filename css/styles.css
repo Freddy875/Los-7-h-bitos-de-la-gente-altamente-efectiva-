@@ -613,19 +613,55 @@ hr{
     color:#D4AF37;
 }
 
-
 /* ===========================================
-   CITA FINAL
+   CITA FINAL - ESTILO DE LA NUMERACIÓN
 =========================================== */
 
 #capitulo8 blockquote{
+    position:relative;
     background-color:#382044;
-    border-left:6px solid #D4AF37;
-    border-radius:8px;
-    padding:20px;
+    border-left:4px solid #D4AF37;
+    border-radius:10px;
+    padding:18px 20px 18px 65px;
     margin:30px 0 0 0;
-    color:#D4AF37;
-    font-size:20px;
-    font-style:italic;
+    color:#FFFFFF;
     text-shadow:1px 1px 3px #8B7500;
+    transition:0.4s;
+}
+
+
+/* SÍMBOLO DE LA CITA */
+
+#capitulo8 blockquote::before{
+    content:"❝";
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    width:35px;
+    height:35px;
+    border:2px solid #D4AF37;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#D4AF37;
+    font-size:24px;
+    font-weight:bold;
+}
+
+
+/* HOVER DE LA CITA */
+
+#capitulo8 blockquote:hover{
+    background-color:#1F3A5F;
+    border-left-color:#FFFFFF;
+    transform:translateX(10px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.35);
+}
+
+
+#capitulo8 blockquote:hover::before{
+    background-color:#D4AF37;
+    color:#382044;
 }
