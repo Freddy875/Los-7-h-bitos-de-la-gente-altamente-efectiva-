@@ -408,3 +408,80 @@ hr{
     background-color:#C97A5A;
     border-color:#FFFFFF;
 }
+
+/* ===========================================
+   LISTA DEL PUNTO CLAVE 7: SINERGIA
+=========================================== */
+
+.lista-sinergia{
+    list-style:none;
+    counter-reset:sinergia;
+    padding:0;
+    margin:30px 0;
+}
+
+
+/* ===========================================
+   ELEMENTOS DE LA LISTA
+=========================================== */
+
+.lista-sinergia li{
+    counter-increment:sinergia;
+    position:relative;
+    background-color:#5F2D79;
+    color:#FFFFFF;
+    margin:15px 0;
+    padding:18px 25px 18px 75px;
+    border-left:4px solid #D4AF37;
+    border-radius:0 12px 12px 0;
+    box-shadow:0 4px 10px rgba(0,0,0,0.25);
+    transition:0.4s ease;
+}
+
+
+/* ===========================================
+   NÚMERO DE CADA ELEMENTO
+=========================================== */
+
+.lista-sinergia li::before{
+    content:counter(sinergia);
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    width:38px;
+    height:38px;
+    background-color:#D4AF37;
+    color:#382044;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    font-size:18px;
+    transition:0.4s ease;
+}
+
+
+/* ===========================================
+   EFECTO HOVER
+=========================================== */
+
+.lista-sinergia li:hover{
+    background-color:#382044;
+    color:#D4AF37;
+    border-left-color:#FFFFFF;
+    transform:translateX(12px);
+    box-shadow:0 6px 18px rgba(212,175,55,0.35);
+}
+
+
+/* ===========================================
+   CAMBIO DEL NÚMERO AL PASAR EL MOUSE
+=========================================== */
+
+.lista-sinergia li:hover::before{
+    background-color:#FFFFFF;
+    color:#7B3FA0;
+    transform:translateY(-50%) rotate(360deg);
+}
