@@ -671,3 +671,200 @@ hr{
 
     box-shadow:0 4px 10px rgba(0,0,0,0.35);
 }
+
+/* ===========================================
+   CAPÍTULO 9
+=========================================== */
+
+#capitulo9{
+    background-color:#5F2D79;
+    border:2px solid #D4AF37;
+    border-radius:20px;
+    padding:35px;
+    margin:40px 0;
+    box-shadow:0 8px 20px rgba(0,0,0,0.35);
+}
+
+
+/* ===========================================
+   TÍTULO DEL CAPÍTULO 9
+=========================================== */
+
+#capitulo9 h2{
+    color:#D4AF37;
+    text-align:center;
+    font-size:32px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    text-shadow:2px 2px 4px #8B7500;
+    margin-top:0;
+    margin-bottom:30px;
+}
+
+
+/* ===========================================
+   TEXTO INTRODUCTORIO
+=========================================== */
+
+#capitulo9 p{
+    color:#FFFFFF;
+    font-size:18px;
+    line-height:1.8;
+    text-shadow:1px 1px 3px #8B7500;
+}
+
+
+/* ===========================================
+   LISTA DE LOS 7 HÁBITOS
+=========================================== */
+
+#capitulo9 ol{
+    list-style:none;
+    counter-reset:habitos;
+    padding:0;
+    margin:30px 0;
+}
+
+
+#capitulo9 ol li{
+    counter-increment:habitos;
+    position:relative;
+
+    background-color:#382044;
+    color:#FFFFFF;
+
+    margin:14px 0;
+    padding:15px 20px 15px 65px;
+
+    border-left:4px solid #D4AF37;
+    border-radius:10px;
+
+    box-shadow:0 4px 8px rgba(0,0,0,0.25);
+
+    transition:0.3s ease;
+}
+
+
+/* ===========================================
+   NÚMEROS DE LOS 7 HÁBITOS
+=========================================== */
+
+#capitulo9 ol li::before{
+    content:counter(habitos);
+
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:35px;
+    height:35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background-color:#D4AF37;
+    color:#382044;
+
+    border-radius:50%;
+
+    font-weight:bold;
+    font-size:17px;
+
+    box-shadow:0 2px 5px rgba(0,0,0,0.3);
+}
+
+
+/* ===========================================
+   HOVER DE LOS 7 HÁBITOS
+=========================================== */
+
+#capitulo9 ol li:hover{
+    background-color:#4A275B;
+    border-left-color:#FFFFFF;
+    transform:translateX(10px);
+    box-shadow:0 5px 15px rgba(212,175,55,0.30);
+}
+
+
+#capitulo9 ol li:hover::before{
+    background-color:#FFFFFF;
+    color:#7B3FA0;
+}
+
+
+/* ===========================================
+   TÍTULO "PRUEBA ESTO"
+=========================================== */
+
+#capitulo9 h3{
+    color:#D4AF37;
+    text-align:center;
+    font-size:26px;
+    margin-top:45px;
+    margin-bottom:25px;
+    text-shadow:2px 2px 4px #8B7500;
+}
+
+
+/* ===========================================
+   LISTA "PRUEBA ESTO"
+=========================================== */
+
+#capitulo9 ul{
+    list-style:none;
+    padding:0;
+    margin:25px 0;
+}
+
+
+#capitulo9 ul li{
+    position:relative;
+
+    color:#FFFFFF;
+    font-size:18px;
+
+    padding:12px 20px 12px 40px;
+    margin:12px 0;
+
+    border-bottom:1px solid #B08D57;
+
+    text-shadow:1px 1px 3px #8B7500;
+
+    transition:0.3s ease;
+}
+
+
+/* ===========================================
+   BULLET EN FORMA DE ROMBO
+=========================================== */
+
+#capitulo9 ul li::before{
+    content:"◆";
+
+    position:absolute;
+    left:8px;
+    top:12px;
+
+    color:#D4AF37;
+    font-size:16px;
+
+    text-shadow:1px 1px 3px #8B7500;
+}
+
+
+/* ===========================================
+   HOVER DE "PRUEBA ESTO"
+=========================================== */
+
+#capitulo9 ul li:hover{
+    color:#D4AF37;
+    padding-left:48px;
+    border-bottom-color:#D4AF37;
+}
+
+
+#capitulo9 ul li:hover::before{
+    color:#FFFFFF;
+}
