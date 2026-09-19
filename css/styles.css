@@ -1,870 +1,349 @@
 /* ===========================================
+   PALETA GENERAL
+=========================================== */
+
+:root{
+    --morado: #7B3FA0;
+    --morado-oscuro: #382044;
+    --morado-profundo: #5F2D79;
+
+    --dorado: #D4AF37;
+    --dorado-claro: #FFD966;
+
+    --blanco: #FFFFFF;
+
+    --azul: #5DADE2;
+    --azul-oscuro: #1F3A5F;
+
+    --bronce: #B08D57;
+}
+
+
+/* ===========================================
    ESTILO GENERAL
 =========================================== */
 
 body{
-    background-color: #7B3FA0;
-    color:#FFFFFF;
-    font-family: Arial;
-    margin:0;
-    padding:20px;
-    line-height:1.8;
+    background-color: var(--morado);
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.8;
 }
+
 
 /* ===========================================
    TÍTULO PRINCIPAL
 =========================================== */
 
 h1{
-    color:#D4AF37;
-    text-align:center;
-    font-size:40px;
-    text-shadow:3px 3px 6px #8B7500;
-
-    background-color:#5F2D79;
-    border:3px solid #B08D57;
-    border-radius:10px;
-    padding:15px;
+    color: var(--dorado);
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px #000000;
+    background-color: var(--morado-oscuro);
+    border: 3px solid var(--bronce);
+    border-radius: 12px;
+    padding: 20px;
 }
 
+
 /* ===========================================
-   SUBTÍTULOS
+   TÍTULOS DE SECCIÓN
 =========================================== */
 
 h2{
-    color:#D4AF37;
-    text-shadow:2px 2px 4px #8B7500;
+    color: var(--dorado);
+    text-shadow: 2px 2px 3px #000000;
 }
+
+h3{
+    color: var(--blanco);
+}
+
 
 /* ===========================================
    PÁRRAFOS
 =========================================== */
 
 p{
-    color:#FFFFFF;
-    text-shadow:1px 1px 3px #D4AF37;
-    text-align:justify;
+    color: var(--blanco);
+    text-align: justify;
 }
 
+
 /* ===========================================
-   MENÚ DE NAVEGACIÓN
+   NAVEGACIÓN
 =========================================== */
 
 nav{
-    background-color:#5F2D79;
-    padding:20px;
-    border:3px solid #D4AF37;
-    border-radius:10px;
+    background-color: var(--morado-oscuro);
+    border: 2px solid var(--dorado);
+    border-radius: 10px;
+    padding: 15px;
 }
 
+nav a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: var(--dorado);
+}
+
+
 /* ===========================================
-   LISTA
+   LISTAS CON BULLETS AZULES
+=========================================== */
+
+ul{
+    list-style: none;
+    padding-left: 25px;
+}
+
+ul li{
+    position: relative;
+    padding: 8px 0 8px 25px;
+}
+
+ul li::before{
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: var(--azul);
+    font-size: 16px;
+}
+
+
+/* ===========================================
+   LISTAS NUMERADAS
+   CUADRO DORADO + CÍRCULO MORADO
 =========================================== */
 
 ol{
-    line-height:2;
+    list-style: none;
+    counter-reset: lista;
+    padding: 0;
+    margin: 25px 0;
 }
+
+ol li{
+    counter-increment: lista;
+
+    position: relative;
+
+    background-color: var(--dorado-claro);
+    color: var(--morado-oscuro);
+
+    margin: 15px 0;
+    padding: 18px 20px 18px 75px;
+
+    border: 2px solid var(--dorado);
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
 
 /* ===========================================
-   ENLACES
+   NÚMERO DENTRO DEL CÍRCULO MORADO
 =========================================== */
 
-a{
-    color:#FFFFFF;
-    text-decoration:none;
-    font-weight:bold;
+ol li::before{
+    content: counter(lista);
+
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--morado);
+    color: var(--blanco);
+
+    border: 3px solid var(--blanco);
+    border-radius: 50%;
+
+    font-weight: bold;
+    font-size: 18px;
+
+    transition: 0.3s ease;
 }
+
+
+/* ===========================================
+   HOVER DE LAS LISTAS NUMERADAS
+=========================================== */
+
+ol li:hover{
+    background-color: var(--dorado);
+    transform: translateX(5px);
+}
+
+ol li:hover::before{
+    background-color: var(--dorado);
+    color: var(--morado-oscuro);
+    border-color: var(--blanco);
+}
+
 
 /* ===========================================
    CITAS
 =========================================== */
 
 blockquote{
-    color:#D4AF37;
-    font-style:italic;
-    text-shadow:2px 2px 4px #8B7500;
-    border-left:5px solid #D4AF37;
-    padding-left:20px;
-    margin:25px 0;
+    background-color: var(--azul-oscuro);
+
+    color: var(--azul);
+
+    border-left: 8px solid var(--dorado);
+
+    margin: 30px 0;
+    padding: 25px 30px;
+
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+
+    line-height: 1.6;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+
+    transition: 0.3s ease;
 }
 
-/* Cambia a dorado al pasar el cursor */
-
-a:hover{
-    color:#D4AF37;
-}
-
-/* Cambia a dorado mientras se hace clic */
-
-a:active{
-    color:#FFD700;
-}
 
 /* ===========================================
-   IMÁGENES
+   HOVER DE LAS CITAS
 =========================================== */
 
-img{
-    display:block;
-    margin:auto;
-    border:4px solid #D4AF37;
-    border-radius:10px;
+blockquote:hover{
+    color: var(--blanco);
+    border-left-color: var(--dorado-claro);
+    transform: translateX(5px);
 }
 
-/* ===========================================
-   FIGURE
-=========================================== */
-
-figure{
-    text-align:center;
-}
-
-/* ===========================================
-   FIGCAPTION
-=========================================== */
-
-figcaption{
-    color:#FFFFFF;
-    font-style:italic;
-    text-shadow:1px 1px 2px #C97A5A;
-}
-
-/* ===========================================
-   SVG
-=========================================== */
-
-svg{
-    display:block;
-    margin:auto;
-}
-
-/* ===========================================
-   AUDIO
-=========================================== */
-
-audio{
-    display:block;
-    margin:20px auto;
-}
-
-/* ===========================================
-   VIDEO
-=========================================== */
-
-video{
-    display:block;
-    margin:20px auto;
-    border:4px solid #D4AF37;
-    border-radius:10px;
-}
-
-/* ===========================================
-   IFRAME
-=========================================== */
-
-iframe{
-    display:block;
-    margin:20px auto;
-    border:4px solid #D4AF37;
-    border-radius:10px;
-}
-
-/* ===========================================
-   SECCIONES
-=========================================== */
 
 /* ===========================================
    SECCIONES
 =========================================== */
 
 section{
-    background-color:#5F2D79;
-    border:3px solid #B08D57;
-    border-radius:15px;
-    padding:25px;
-    margin:35px 0;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    background-color: var(--morado-oscuro);
+
+    border: 2px solid var(--bronce);
+    border-radius: 12px;
+
+    padding: 25px;
+    margin: 30px 0;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+
 /* ===========================================
-   LÍNEAS HORIZONTALES
+   IMÁGENES
+=========================================== */
+
+img{
+    max-width: 100%;
+    height: auto;
+
+    border: 3px solid var(--dorado);
+    border-radius: 10px;
+}
+
+
+/* ===========================================
+   FIGURAS
+=========================================== */
+
+figure{
+    text-align: center;
+}
+
+figcaption{
+    color: var(--dorado);
+    font-style: italic;
+    margin-top: 10px;
+}
+
+
+/* ===========================================
+   AUDIO
+=========================================== */
+
+audio{
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+/* ===========================================
+   VIDEO
+=========================================== */
+
+video{
+    max-width: 100%;
+
+    border: 3px solid var(--dorado);
+    border-radius: 10px;
+}
+
+
+/* ===========================================
+   IFRAMES
+=========================================== */
+
+iframe{
+    max-width: 100%;
+
+    border: 3px solid var(--dorado);
+    border-radius: 10px;
+}
+
+
+/* ===========================================
+   LÍNEAS SEPARADORAS
 =========================================== */
 
 hr{
-    border:2px solid #D4AF37;
+    border: none;
+    border-top: 3px solid var(--dorado);
+    margin: 35px 0;
 }
 
-/*
-=======
-   LISTA NEGRA
-=========================================== */
 
 /* ===========================================
-   7 ÁREAS CLAVE
+   ENLACES
 =========================================== */
 
-.areas-clave{
-    background-color:#4E2463;
-    border-left:5px solid #D4AF37;
-    border-radius:10px;
-    padding:20px 25px 20px 50px;
-    margin:25px 0;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+a{
+    color: var(--blanco);
 }
 
-/* ===========================================
-   ELEMENTOS DE LA LISTA
-=========================================== */
-
-.areas-clave li{
-    color:#FFFFFF;
-    padding:10px 15px;
-    margin:8px 0;
-    text-shadow:1px 1px 3px #8B7500;
-    border-bottom:1px solid #B08D57;
+a:hover{
+    color: var(--dorado);
 }
 
-/* ===========================================
-   ÚLTIMO ELEMENTO
-=========================================== */
-
-.areas-clave li:last-child{
-    border-bottom:none;
-}
-
-/* ===========================================
-   EFECTO AL PASAR EL CURSOR
-=========================================== */
-
-.areas-clave li:hover{
-    color:#D4AF37;
-    padding-left:20px;
-    transition:0.3s;
-}
-
-/* ===========================================
-   LISTA DE CÍRCULOS
-=========================================== */
-
-.circulos{
-    list-style:none;
-    padding-left:20px;
-    margin:20px 0;
-}
-
-.circulos li{
-    color:#5DADE2;
-    margin:12px 0;
-    padding-left:25px;
-    position:relative;
-    text-shadow:1px 1px 3px #1F4E79;
-}
-
-/* ===========================================
-   ROMBO DORADO
-=========================================== */
-
-.circulos li::before{
-    content:"◆";
-    color:#D4AF37;
-    position:absolute;
-    left:0;
-    font-size:14px;
-    text-shadow:1px 1px 2px #8B7500;
-}
-
-/* ===========================================
-   SECCIÓN MENTALIDAD DE GANAR-GANAR
-=========================================== */
-
-.seccion-ganar-ganar{
-    background-color:#382044;
-    border:2px solid #D4AF37;
-    border-radius:15px;
-    padding:25px;
-    margin:35px 0;
-    box-shadow:0 6px 15px rgba(0,0,0,0.35);
-    transition:0.4s;
-}
-
-/* ===========================================
-   TÍTULO GANAR-GANAR
-=========================================== */
-
-.ganar-ganar-titulo{
-    color:#D4AF37;
-    font-size:28px;
-    font-weight:bold;
-    text-align:center;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    text-shadow:2px 2px 4px #8B7500;
-    border-bottom:2px solid #B08D57;
-    padding-bottom:12px;
-}
-
-/* ===========================================
-   TEXTO DE GANAR-GANAR
-=========================================== */
-
-.seccion-ganar-ganar p:not(.ganar-ganar-titulo){
-    color:#FFFFFF;
-    text-shadow:1px 1px 3px #8B7500;
-}
-
-/* ===========================================
-   EFECTO HOVER DE TODA LA SECCIÓN
-=========================================== */
-
-.seccion-ganar-ganar:hover{
-    background-color:#5F2D79;
-    border-color:#C97A5A;
-    box-shadow:0 8px 20px rgba(201,122,90,0.45);
-}
-
-/* ===========================================
-   CAMBIO DE COLOR DEL CONTENIDO AL HOVER
-=========================================== */
-
-.seccion-ganar-ganar:hover .ganar-ganar-titulo{
-    color:#FFFFFF;
-    border-color:#C97A5A;
-    text-shadow:2px 2px 4px #7A4938;
-}
-
-.seccion-ganar-ganar:hover p:not(.ganar-ganar-titulo){
-    color:#D4AF37;
-}
-
-/* ===========================================
-   4 FORMAS DE MANTENER RELACIONES EXCELENTES
-=========================================== */
-
-.relaciones-excelentes{
-    list-style:none;
-    counter-reset:relaciones;
-    padding:10px 0;
-    margin:30px 0;
-}
-
-/* ===========================================
-   ELEMENTOS DE LA LISTA
-=========================================== */
-
-.relaciones-excelentes li{
-    counter-increment:relaciones;
-    position:relative;
-    color:#3B2147;
-    background-color:#D4AF37;
-    padding:18px 25px 18px 70px;
-    margin:0;
-    border-bottom:2px solid #B08D57;
-    line-height:1.7;
-    transition:0.3s ease;
-}
-
-/* ===========================================
-   NUMERACIÓN
-=========================================== */
-
-.relaciones-excelentes li::before{
-    content:counter(relaciones);
-    position:absolute;
-    left:18px;
-    top:50%;
-    transform:translateY(-50%);
-    width:35px;
-    height:35px;
-    border:2px solid #FFFFFF;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#FFFFFF;
-    font-weight:bold;
-    background-color:#7B3FA0;
-    box-shadow:0 2px 5px rgba(0,0,0,0.3);
-}
 
 /* ===========================================
    TEXTO DESTACADO
 =========================================== */
 
-.relaciones-excelentes strong{
-    color:#7B3FA0;
-}
-
-/* ===========================================
-   EFECTO HOVER
-=========================================== */
-
-.relaciones-excelentes li:hover{
-    background-color:#E6C85C;
-    padding-left:78px;
-    border-bottom-color:#7B3FA0;
-}
-
-.relaciones-excelentes li:hover::before{
-    background-color:#C97A5A;
-    border-color:#FFFFFF;
-}
-
-/* ===========================================
-   LISTA DEL PUNTO CLAVE 7: SINERGIA
-=========================================== */
-
-.lista-sinergia{
-    list-style:none;
-    counter-reset:sinergia;
-    padding:0;
-    margin:30px 0;
-}
-
-
-/* ===========================================
-   ELEMENTOS DE LA LISTA
-=========================================== */
-
-.lista-sinergia li{
-    counter-increment:sinergia;
-    position:relative;
-    background-color:#5F2D79;
-    color:#FFFFFF;
-    margin:15px 0;
-    padding:18px 25px 18px 75px;
-    border-left:4px solid #D4AF37;
-    border-radius:0 12px 12px 0;
-    box-shadow:0 4px 10px rgba(0,0,0,0.25);
-    transition:0.4s ease;
-}
-
-
-/* ===========================================
-   NÚMERO DE CADA ELEMENTO
-=========================================== */
-
-.lista-sinergia li::before{
-    content:counter(sinergia);
-    position:absolute;
-    left:20px;
-    top:50%;
-    transform:translateY(-50%);
-    width:38px;
-    height:38px;
-    background-color:#D4AF37;
-    color:#382044;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-weight:bold;
-    font-size:18px;
-    transition:0.4s ease;
-}
-
-
-/* ===========================================
-   EFECTO HOVER
-=========================================== */
-
-.lista-sinergia li:hover{
-    background-color:#382044;
-    color:#D4AF37;
-    border-left-color:#FFFFFF;
-    transform:translateX(12px);
-    box-shadow:0 6px 18px rgba(212,175,55,0.35);
-}
-
-
-/* ===========================================
-   CAMBIO DEL NÚMERO AL PASAR EL MOUSE
-=========================================== */
-
-.lista-sinergia li:hover::before{
-    background-color:#FFFFFF;
-    color:#7B3FA0;
-    transform:translateY(-50%) rotate(360deg);
-}
-
-/* ===========================================
-   PUNTO CLAVE 8: AFILA LA SIERRA
-=========================================== */
-
-#capitulo8{
-    background-color:#5F2D79;
-    border:2px solid #D4AF37;
-    border-radius:20px;
-    padding:35px;
-    margin:40px 0;
-    box-shadow:0 8px 20px rgba(0,0,0,0.35);
-}
-
-
-/* ===========================================
-   ARTÍCULO SIN CUADRO INTERNO
-=========================================== */
-
-#capitulo8 article{
-    background:none;
-    border:none;
-    box-shadow:none;
-    padding:0;
-    margin:0;
-}
-
-
-/* ===========================================
-   TÍTULO DEL PUNTO CLAVE 8
-=========================================== */
-
-#capitulo8 h2{
-    color:#D4AF37;
-    font-size:32px;
-    text-align:center;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    text-shadow:2px 2px 4px #8B7500;
-    margin-top:0;
-    margin-bottom:30px;
-}
-
-
-/* ===========================================
-   PÁRRAFOS
-=========================================== */
-
-#capitulo8 p{
-    color:#FFFFFF;
-    font-size:18px;
-    text-shadow:1px 1px 3px #8B7500;
-    margin-bottom:20px;
-}
-
-
-/* ===========================================
-   LISTA DE LAS 4 DIMENSIONES
-=========================================== */
-
-#capitulo8 ol{
-    list-style:none;
-    padding:0;
-    margin:30px 0;
-    counter-reset:dimension;
-}
-
-
-#capitulo8 ol li{
-    counter-increment:dimension;
-    position:relative;
-    background-color:#382044;
-    border-left:4px solid #D4AF37;
-    border-radius:10px;
-    padding:18px 20px 18px 65px;
-    margin-bottom:15px;
-    color:#FFFFFF;
-    text-shadow:1px 1px 3px #8B7500;
-    transition:0.4s;
-}
-
-
-/* NÚMERO DE CADA DIMENSIÓN */
-
-#capitulo8 ol li::before{
-    content:counter(dimension);
-    position:absolute;
-    left:15px;
-    top:50%;
-    transform:translateY(-50%);
-    width:35px;
-    height:35px;
-    border:2px solid #D4AF37;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#D4AF37;
-    font-weight:bold;
-}
-
-
-/* ===========================================
-   HOVER DE LAS DIMENSIONES
-=========================================== */
-
-#capitulo8 ol li:hover{
-    background-color:#1F3A5F;
-    border-left-color:#FFFFFF;
-    transform:translateX(10px);
-    box-shadow:0 5px 15px rgba(0,0,0,0.35);
-}
-
-
-#capitulo8 ol li:hover::before{
-    background-color:#D4AF37;
-    color:#382044;
-}
-
-
-/* ===========================================
-   PALABRAS PRINCIPALES
-=========================================== */
-
-#capitulo8 strong{
-    color:#D4AF37;
-}
-
-/* ===========================================
-   CITA FINAL - REFLEXIÓN DESTACADA
-=========================================== */
-
-#capitulo8 blockquote{
-    position:relative;
-    margin:50px auto 25px;
-    padding:35px 45px;
-    max-width:850px;
-
-    background-color:#1F3A5F;
-    color:#FFFFFF;
-
-    font-size:21px;
-    font-style:italic;
-    text-align:center;
-    line-height:1.8;
-
-    border:2px solid #C97A5A;
-    border-radius:25px 5px 25px 5px;
-
-    box-shadow:8px 8px 0 #D4AF37;
-
-    text-shadow:1px 1px 3px #000000;
-}
-
-
-/* ===========================================
-   SÍMBOLO DE CITA
-=========================================== */
-
-#capitulo8 blockquote::before{
-    content:"❝";
-
-    position:absolute;
-    top:-30px;
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:60px;
-    height:60px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background-color:#D4AF37;
-    color:#382044;
-
-    border:3px solid #C97A5A;
-    border-radius:50%;
-
-    font-size:42px;
-    font-style:normal;
-
-    box-shadow:0 4px 10px rgba(0,0,0,0.35);
-}
-
-/* ===========================================
-   CAPÍTULO 9
-=========================================== */
-
-#capitulo9{
-    background-color:#5F2D79;
-    border:2px solid #D4AF37;
-    border-radius:20px;
-    padding:35px;
-    margin:40px 0;
-    box-shadow:0 8px 20px rgba(0,0,0,0.35);
-}
-
-
-/* ===========================================
-   TÍTULO DEL CAPÍTULO 9
-=========================================== */
-
-#capitulo9 h2{
-    color:#D4AF37;
-    text-align:center;
-    font-size:32px;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    text-shadow:2px 2px 4px #8B7500;
-    margin-top:0;
-    margin-bottom:30px;
-}
-
-
-/* ===========================================
-   TEXTO INTRODUCTORIO
-=========================================== */
-
-#capitulo9 p{
-    color:#FFFFFF;
-    font-size:18px;
-    line-height:1.8;
-    text-shadow:1px 1px 3px #8B7500;
-}
-
-
-/* ===========================================
-   LISTA DE LOS 7 HÁBITOS
-=========================================== */
-
-#capitulo9 ol{
-    list-style:none;
-    counter-reset:habitos;
-    padding:0;
-    margin:30px 0;
-}
-
-
-#capitulo9 ol li{
-    counter-increment:habitos;
-    position:relative;
-
-    background-color:#382044;
-    color:#FFFFFF;
-
-    margin:14px 0;
-    padding:15px 20px 15px 65px;
-
-    border-left:4px solid #D4AF37;
-    border-radius:10px;
-
-    box-shadow:0 4px 8px rgba(0,0,0,0.25);
-
-    transition:0.3s ease;
-}
-
-
-/* ===========================================
-   NÚMEROS DE LOS 7 HÁBITOS
-=========================================== */
-
-#capitulo9 ol li::before{
-    content:counter(habitos);
-
-    position:absolute;
-    left:15px;
-    top:50%;
-    transform:translateY(-50%);
-
-    width:35px;
-    height:35px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background-color:#D4AF37;
-    color:#382044;
-
-    border-radius:50%;
-
-    font-weight:bold;
-    font-size:17px;
-
-    box-shadow:0 2px 5px rgba(0,0,0,0.3);
-}
-
-
-/* ===========================================
-   HOVER DE LOS 7 HÁBITOS
-=========================================== */
-
-#capitulo9 ol li:hover{
-    background-color:#4A275B;
-    border-left-color:#FFFFFF;
-    transform:translateX(10px);
-    box-shadow:0 5px 15px rgba(212,175,55,0.30);
-}
-
-
-#capitulo9 ol li:hover::before{
-    background-color:#FFFFFF;
-    color:#7B3FA0;
-}
-
-
-/* ===========================================
-   TÍTULO "PRUEBA ESTO"
-=========================================== */
-
-#capitulo9 h3{
-    color:#D4AF37;
-    text-align:center;
-    font-size:26px;
-    margin-top:45px;
-    margin-bottom:25px;
-    text-shadow:2px 2px 4px #8B7500;
-}
-
-
-/* ===========================================
-   LISTA "PRUEBA ESTO"
-=========================================== */
-
-#capitulo9 ul{
-    list-style:none;
-    padding:0;
-    margin:25px 0;
-}
-
-
-#capitulo9 ul li{
-    position:relative;
-
-    color:#FFFFFF;
-    font-size:18px;
-
-    padding:12px 20px 12px 40px;
-    margin:12px 0;
-
-    border-bottom:1px solid #B08D57;
-
-    text-shadow:1px 1px 3px #8B7500;
-
-    transition:0.3s ease;
-}
-
-
-/* ===========================================
-   BULLET EN FORMA DE ROMBO
-=========================================== */
-
-#capitulo9 ul li::before{
-    content:"◆";
-
-    position:absolute;
-    left:8px;
-    top:12px;
-
-    color:#D4AF37;
-    font-size:16px;
-
-    text-shadow:1px 1px 3px #8B7500;
-}
-
-
-/* ===========================================
-   HOVER DE "PRUEBA ESTO"
-=========================================== */
-
-#capitulo9 ul li:hover{
-    color:#D4AF37;
-    padding-left:48px;
-    border-bottom-color:#D4AF37;
-}
-
-
-#capitulo9 ul li:hover::before{
-    color:#FFFFFF;
+strong{
+    color: var(--dorado);
 }
