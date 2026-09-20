@@ -96,7 +96,7 @@ nav{
 
     border-radius:10px;
 
-    text-align:center;
+    text-align:left;
 
     margin:30px auto;
 
@@ -109,7 +109,7 @@ nav{
 =========================================== */
 
 nav h2{
-    text-align:center;
+    text-align:left;
 
     color:#D4AF37;
 
@@ -264,7 +264,7 @@ ul{
 ul li{
     position:relative;
 
-    color:#FFFFFF;
+    color:#5DADE2;
 
     padding:8px 20px 8px 35px;
 
@@ -272,9 +272,8 @@ ul li{
 
     line-height:1.7;
 
-    text-shadow:1px 1px 3px #D4AF37;
+    text-shadow:1px 1px 3px #1F4E79;
 }
-
 
 /* ===========================================
    BULLET AZUL
