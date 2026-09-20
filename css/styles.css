@@ -94,17 +94,16 @@ nav{
 
 /* ===========================================
    ÍNDICE
-   LOS NÚMEROS Y ENLACES QUEDAN CENTRADOS
+   ALINEADO HACIA LA IZQUIERDA
 =========================================== */
 
 #menu ol{
     list-style-position:inside;
     padding:0;
-    margin:20px auto;
-    text-align:center;
+    margin:20px 0;
+    text-align:left;
     line-height:2;
 }
-
 
 /* ===========================================
    ELEMENTOS DEL ÍNDICE
