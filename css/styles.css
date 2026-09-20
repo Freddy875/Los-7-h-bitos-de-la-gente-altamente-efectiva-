@@ -4,14 +4,10 @@
 
 body{
     background-color:#7B3FA0;
-
     color:#FFFFFF;
-
     font-family:Arial, Helvetica, sans-serif;
-
     margin:0;
     padding:20px;
-
     line-height:1.8;
 }
 
@@ -22,21 +18,13 @@ body{
 
 h1{
     color:#D4AF37;
-
     text-align:center;
-
     font-size:40px;
-
     text-shadow:3px 3px 6px #8B7500;
-
     background-color:#5F2D79;
-
     border:3px solid #B08D57;
-
     border-radius:10px;
-
     padding:15px;
-
     margin:20px auto 30px;
 }
 
@@ -47,14 +35,11 @@ h1{
 
 h2{
     color:#D4AF37;
-
     text-shadow:2px 2px 4px #8B7500;
 }
 
-
 h3{
     color:#FFFFFF;
-
     text-shadow:1px 1px 3px #D4AF37;
 }
 
@@ -65,11 +50,8 @@ h3{
 
 p{
     color:#FFFFFF;
-
     text-shadow:1px 1px 3px #D4AF37;
-
     text-align:justify;
-
     line-height:1.8;
 }
 
@@ -89,17 +71,11 @@ strong{
 
 nav{
     background-color:#5F2D79;
-
     padding:20px;
-
     border:3px solid #D4AF37;
-
     border-radius:10px;
-
     text-align:left;
-
     margin:30px auto;
-
     box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
@@ -108,29 +84,24 @@ nav{
    TÍTULO DEL MENÚ
 =========================================== */
 
-nav h2{
+#menu h2{
     text-align:left;
-
     color:#D4AF37;
-
     margin-top:0;
+    margin-bottom:20px;
 }
 
 
 /* ===========================================
    ÍNDICE
-   SE MANTIENE CENTRADO
+   LOS NÚMEROS Y ENLACES QUEDAN CENTRADOS
 =========================================== */
 
 #menu ol{
     list-style-position:inside;
-
     padding:0;
-
     margin:20px auto;
-
     text-align:center;
-
     line-height:2;
 }
 
@@ -141,19 +112,12 @@ nav h2{
 
 #menu ol li{
     color:#FFFFFF;
-
     background:none;
-
     border:none;
-
     padding:5px 10px;
-
     margin:3px 0;
-
     font-weight:normal;
-
     box-shadow:none;
-
     transition:0.3s ease;
 }
 
@@ -164,14 +128,10 @@ nav h2{
 
 #menu ol li a{
     color:#FFFFFF;
-
     text-decoration:none;
-
     font-weight:bold;
-
     transition:0.3s ease;
 }
-
 
 #menu ol li a:hover{
     color:#D4AF37;
@@ -184,17 +144,13 @@ nav h2{
 
 a{
     color:#FFFFFF;
-
     text-decoration:none;
-
     font-weight:bold;
 }
-
 
 a:hover{
     color:#D4AF37;
 }
-
 
 a:active{
     color:#FFD700;
@@ -207,15 +163,10 @@ a:active{
 
 section{
     background-color:#5F2D79;
-
     border:3px solid #B08D57;
-
     border-radius:15px;
-
     padding:25px;
-
     margin:35px 0;
-
     box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
@@ -226,7 +177,6 @@ section{
 
 article{
     width:100%;
-
     box-sizing:border-box;
 }
 
@@ -237,9 +187,7 @@ article{
 
 hr{
     border:none;
-
     border-top:2px solid #D4AF37;
-
     margin:30px 0;
 }
 
@@ -250,47 +198,38 @@ hr{
 
 ul{
     list-style:none;
-
     padding:10px 0;
-
     margin:25px 0;
 }
 
 
 /* ===========================================
-   ELEMENTOS DE LISTAS
+   TODOS LOS TEXTOS DE LOS BULLETS
+   SON AZULES
 =========================================== */
 
 ul li{
     position:relative;
-
     color:#5DADE2;
-
     padding:8px 20px 8px 35px;
-
     margin:6px 0;
-
     line-height:1.7;
-
     text-shadow:1px 1px 3px #1F4E79;
 }
 
+
 /* ===========================================
-   BULLET AZUL
+   ROMBO AZUL
 =========================================== */
 
 ul li::before{
     content:"◆";
-
     position:absolute;
-
     left:5px;
-
     top:8px;
-
     color:#5DADE2;
-
     font-size:17px;
+    text-shadow:1px 1px 2px #1F4E79;
 }
 
 
@@ -300,11 +239,8 @@ ul li::before{
 
 main ol{
     list-style:none;
-
     counter-reset:lista;
-
     padding:10px 0;
-
     margin:30px 0;
 }
 
@@ -315,21 +251,17 @@ main ol{
 
 main ol > li{
     counter-increment:lista;
-
     position:relative;
 
     color:#3B2147;
-
     background-color:#D4AF37;
 
     padding:18px 25px 18px 70px;
-
     margin:0;
 
     border-bottom:2px solid #B08D57;
 
     line-height:1.7;
-
     transition:0.3s ease;
 
     box-sizing:border-box;
@@ -346,23 +278,18 @@ main ol > li::before{
     position:absolute;
 
     left:18px;
-
     top:50%;
 
     transform:translateY(-50%);
 
     width:35px;
-
     height:35px;
 
     border:2px solid #FFFFFF;
-
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     color:#FFFFFF;
@@ -387,14 +314,12 @@ main ol > li strong{
 
 
 /* ===========================================
-   HOVER DE LAS LISTAS NUMERADAS
+   EFECTO HOVER DE LAS LISTAS NUMERADAS
 =========================================== */
 
 main ol > li:hover{
     background-color:#E6C85C;
-
     padding-left:78px;
-
     border-bottom-color:#7B3FA0;
 }
 
@@ -405,9 +330,7 @@ main ol > li:hover{
 
 main ol > li:hover::before{
     background-color:#D4AF37;
-
     color:#382044;
-
     border-color:#FFFFFF;
 }
 
@@ -470,13 +393,11 @@ main ol > li:hover::before{
     position:absolute;
 
     left:18px;
-
     top:50%;
 
     transform:translateY(-50%);
 
     width:35px;
-
     height:35px;
 
     border:2px solid #FFFFFF;
@@ -484,9 +405,7 @@ main ol > li:hover::before{
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     color:#FFFFFF;
@@ -496,6 +415,8 @@ main ol > li:hover::before{
     background-color:#7B3FA0;
 
     box-shadow:0 2px 5px rgba(0,0,0,0.3);
+
+    transition:0.3s ease;
 }
 
 
@@ -536,12 +457,13 @@ main ol > li:hover::before{
 
 /* ===========================================
    ELEMENTOS DE LISTA DE ROMBOS
+   TEXTO AZUL
 =========================================== */
 
 .circulos li{
     position:relative;
 
-    color:#FFFFFF;
+    color:#5DADE2;
 
     margin:12px 0;
 
@@ -549,7 +471,7 @@ main ol > li:hover::before{
 
     line-height:1.7;
 
-    text-shadow:1px 1px 3px #D4AF37;
+    text-shadow:1px 1px 3px #1F4E79;
 }
 
 
@@ -563,7 +485,6 @@ main ol > li:hover::before{
     position:absolute;
 
     left:0;
-
     top:8px;
 
     color:#5DADE2;
@@ -706,13 +627,11 @@ main ol > li:hover::before{
     position:absolute;
 
     left:18px;
-
     top:50%;
 
     transform:translateY(-50%);
 
     width:35px;
-
     height:35px;
 
     border:2px solid #FFFFFF;
@@ -722,7 +641,6 @@ main ol > li:hover::before{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     color:#FFFFFF;
@@ -732,6 +650,8 @@ main ol > li:hover::before{
     background-color:#7B3FA0;
 
     box-shadow:0 2px 5px rgba(0,0,0,0.3);
+
+    transition:0.3s ease;
 }
 
 
@@ -814,13 +734,11 @@ main ol > li:hover::before{
     position:absolute;
 
     left:18px;
-
     top:50%;
 
     transform:translateY(-50%);
 
     width:35px;
-
     height:35px;
 
     border:2px solid #FFFFFF;
@@ -830,7 +748,6 @@ main ol > li:hover::before{
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     color:#FFFFFF;
@@ -917,19 +834,16 @@ blockquote::before{
     position:absolute;
 
     top:-30px;
-
     left:50%;
 
     transform:translateX(-50%);
 
     width:60px;
-
     height:60px;
 
     display:flex;
 
     justify-content:center;
-
     align-items:center;
 
     background-color:#D4AF37;
@@ -1236,19 +1150,16 @@ iframe{
     position:absolute;
 
     top:-30px;
-
     left:50%;
 
     transform:translateX(-50%);
 
     width:60px;
-
     height:60px;
 
     display:flex;
 
     justify-content:center;
-
     align-items:center;
 
     background-color:#D4AF37;
@@ -1344,7 +1255,7 @@ iframe{
 
 
 /* ===========================================
-   CAPÍTULO 9 - BULLETS
+   CAPÍTULO 9 - BULLETS AZULES
 =========================================== */
 
 #capitulo9 ul{
@@ -1356,10 +1267,14 @@ iframe{
 }
 
 
+/* ===========================================
+   CAPÍTULO 9 - TEXTO AZUL
+=========================================== */
+
 #capitulo9 ul li{
     position:relative;
 
-    color:#FFFFFF;
+    color:#5DADE2;
 
     font-size:18px;
 
@@ -1369,11 +1284,15 @@ iframe{
 
     border-bottom:1px solid #B08D57;
 
-    text-shadow:1px 1px 3px #D4AF37;
+    text-shadow:1px 1px 3px #1F4E79;
 
     transition:0.3s ease;
 }
 
+
+/* ===========================================
+   CAPÍTULO 9 - ROMBO AZUL
+=========================================== */
 
 #capitulo9 ul li::before{
     content:"◆";
@@ -1387,8 +1306,14 @@ iframe{
     color:#5DADE2;
 
     font-size:16px;
+
+    text-shadow:1px 1px 2px #1F4E79;
 }
 
+
+/* ===========================================
+   CAPÍTULO 9 - HOVER BULLET
+=========================================== */
 
 #capitulo9 ul li:hover{
     color:#D4AF37;
@@ -1409,118 +1334,90 @@ iframe{
         padding:10px;
     }
 
-
     h1{
         font-size:30px;
-
         padding:15px;
     }
-
 
     section{
         padding:18px;
     }
 
-
     nav{
         padding:15px;
     }
 
-
     #menu ol{
         padding:0 5px;
-
         line-height:1.8;
     }
-
 
     main ol > li{
         padding:18px 18px 18px 65px;
     }
 
-
     main ol > li:hover{
         padding-left:70px;
     }
-
 
     .areas-clave li{
         padding-left:65px;
     }
 
-
     .areas-clave li:hover{
         padding-left:70px;
     }
-
 
     .relaciones-excelentes li{
         padding-left:65px;
     }
 
-
     .relaciones-excelentes li:hover{
         padding-left:70px;
     }
-
 
     .lista-sinergia li{
         padding-left:65px;
     }
 
-
     .lista-sinergia li:hover{
         padding-left:70px;
     }
 
-
     blockquote{
         padding:35px 25px;
-
         font-size:18px;
-
         box-shadow:6px 6px 0 #D4AF37;
     }
 
-
     blockquote::before{
         width:55px;
-
         height:55px;
-
         font-size:38px;
     }
-
 
     audio{
         width:100%;
     }
 
-
     .spotify-container iframe{
         width:100%;
     }
 
-
     .youtube-container iframe{
         width:100%;
-
         height:auto;
-
         aspect-ratio:16 / 9;
     }
-
 
     video{
         width:100%;
     }
 
-
     #capitulo8,
     #capitulo9{
         padding:20px;
     }
-
 
     #capitulo8 h2,
     #capitulo9 h2{
@@ -1539,71 +1436,59 @@ iframe{
         font-size:25px;
     }
 
-
     h2{
         font-size:22px;
     }
-
 
     h3{
         font-size:19px;
     }
 
-
     p{
         text-align:left;
     }
 
+    #menu h2{
+        text-align:left;
+    }
 
     #menu ol{
         text-align:center;
-
         font-size:15px;
     }
-
 
     main ol > li{
         padding:16px 15px 16px 60px;
     }
 
-
     main ol > li::before{
         left:14px;
-
         width:32px;
-
         height:32px;
     }
-
 
     main ol > li:hover{
         padding-left:64px;
     }
 
-
     .relaciones-excelentes li{
         padding:16px 15px 16px 60px;
     }
-
 
     .relaciones-excelentes li:hover{
         padding-left:64px;
     }
 
-
     .lista-sinergia li{
         padding:16px 15px 16px 60px;
     }
-
 
     .lista-sinergia li:hover{
         padding-left:64px;
     }
 
-
     blockquote{
         padding:32px 18px;
-
         font-size:17px;
     }
 }
