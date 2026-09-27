@@ -1,13 +1,13 @@
 # Los 7 hábitos de la gente altamente efectiva
 
-Resumen: No
-Estatus: Terminado
-Autor/Fuente: Stephen Covey
-Tipo: 📕 Libro
-Extracto: Stephen R. Covey (1932-2012) fue empresario, profesor, conferenciante y escritor especializado en el comportamiento efectivo. Él mismo definió los hábitos básicos necesarios para mejorar gradualmente nuestra vida.
-Modificado: 30 de agosto de 2026 15:28
-Creado: 6 de octubre de 2025 9:00
-Área: 🛡️Personal
+- Resumen: No
+- Estatus: Terminado
+- Autor/Fuente: Stephen Covey
+- Tipo: 📕 Libro
+- Extracto: Stephen R. Covey (1932-2012) fue empresario, profesor, conferenciante y escritor especializado en el comportamiento efectivo. Él mismo definió los hábitos básicos necesarios para mejorar gradualmente nuestra vida.
+- Modificado: 30 de agosto de 2026 15:28
+- Creado: 6 de octubre de 2025 9:00
+- Área: 🛡️Personal
 
 - Los hábitos correcto son el secreto del éxito en la vida
     
