@@ -9,6 +9,8 @@
 - Creado: 6 de octubre de 2025 9:00
 - Área: 🛡️Personal
 
+---
+
 - Los hábitos correcto son el secreto del éxito en la vida
     
     Los humanos necesitamos hábitos. Nuestras rutinas definen nuestro carácter y ejercen una fuerza invisible sobre nuestro comportamiento. 
