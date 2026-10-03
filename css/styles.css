@@ -1491,3 +1491,81 @@ iframe{
         font-size:17px;
     }
 }
+
+.cq-app{
+  --card:#ffffff; --ink:#1c2433; --muted:#5c667a; --line:#d5dae3; --soft:#f1f4f8;
+  --accent:#1f6f8b; --on-accent:#ffffff;
+  --ok:#17653f; --ok-bg:#e2f3e9; --bad:#a3322a; --bad-bg:#fbe7e4;
+  max-width:640px; margin:0 auto; padding:16px; box-sizing:border-box;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); line-height:1.5;
+}
+@media (prefers-color-scheme:dark){
+  .cq-app{
+    --card:#1b2230; --ink:#e8ecf3; --muted:#a2adc0; --line:#37425a; --soft:#242d3f;
+    --accent:#5bb4d2; --on-accent:#10202a;
+    --ok:#7ad3a0; --ok-bg:#173326; --bad:#f09b93; --bad-bg:#3a1e1c;
+  }
+}
+.cq-app *{box-sizing:border-box}
+.cq-title{font:700 1.35rem/1.3 Georgia,"Times New Roman",serif; margin:0 0 4px}
+.cq-sub{margin:0 0 16px; color:var(--muted); font-size:.95rem}
+
+.cq-tabs{display:flex; gap:4px; padding:4px; background:var(--soft); border-radius:12px; margin-bottom:16px}
+.cq-tab{flex:1; padding:10px; border:0; border-radius:9px; background:transparent; color:var(--muted);
+  font:600 .95rem inherit; font-family:inherit; cursor:pointer}
+.cq-tab[aria-selected="true"]{background:var(--card); color:var(--ink); box-shadow:0 1px 3px rgba(0,0,0,.15)}
+
+.cq-box{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px}
+.cq-meta{display:flex; justify-content:space-between; font-size:.85rem; color:var(--muted); margin-bottom:8px}
+.cq-bar{height:6px; background:var(--soft); border-radius:3px; overflow:hidden; margin-bottom:18px}
+.cq-bar i{display:block; height:100%; background:var(--accent); transition:width .3s}
+.cq-q{font:600 1.2rem/1.4 Georgia,"Times New Roman",serif; margin:0 0 16px}
+
+.cq-opts{display:grid; gap:10px}
+.cq-opt{display:flex; gap:12px; align-items:flex-start; width:100%; text-align:left; padding:12px 14px;
+  background:var(--card); color:var(--ink); border:1.5px solid var(--line); border-radius:12px;
+  font:inherit; cursor:pointer}
+.cq-opt:hover:not(:disabled){border-color:var(--accent)}
+.cq-opt:disabled{cursor:default}
+.cq-letter{flex:none; width:26px; height:26px; border-radius:50%; background:var(--soft);
+  display:grid; place-items:center; font-weight:700; font-size:.85rem}
+.cq-opt.ok{border-color:var(--ok); background:var(--ok-bg)}
+.cq-opt.ok .cq-letter{background:var(--ok); color:var(--card)}
+.cq-opt.bad{border-color:var(--bad); background:var(--bad-bg)}
+.cq-opt.bad .cq-letter{background:var(--bad); color:var(--card)}
+
+.cq-fb{margin-top:16px; padding:12px 14px; border-radius:12px; font-size:.95rem}
+.cq-fb strong{display:block; margin-bottom:2px}
+.cq-fb.ok{background:var(--ok-bg); color:var(--ok)}
+.cq-fb.bad{background:var(--bad-bg); color:var(--bad)}
+.cq-fb span{color:var(--ink)}
+
+.cq-btn{padding:11px 20px; border:0; border-radius:10px; background:var(--accent); color:var(--on-accent);
+  font:600 1rem inherit; font-family:inherit; cursor:pointer}
+.cq-btn.alt{background:var(--soft); color:var(--ink)}
+.cq-btn:disabled{opacity:.4; cursor:default}
+.cq-row{display:flex; gap:10px; margin-top:16px; flex-wrap:wrap}
+.cq-row.end{justify-content:flex-end}
+
+.cq-score{font:700 2.6rem/1 Georgia,serif; margin:8px 0}
+.cq-review{margin:16px 0 0; padding:0; list-style:none; display:grid; gap:8px; font-size:.92rem}
+.cq-review li{padding:10px 12px; border-radius:10px; background:var(--soft)}
+.cq-review b.ok{color:var(--ok)} .cq-review b.bad{color:var(--bad)}
+
+/* Tarjetas */
+.cq-card{display:block; width:100%; padding:0; border:0; background:none; font:inherit; color:inherit;
+  text-align:left; cursor:pointer; perspective:1200px}
+.cq-inner{display:grid; transition:transform .5s; transform-style:preserve-3d}
+.cq-card.flip .cq-inner{transform:rotateY(180deg)}
+.cq-face{grid-area:1/1; min-height:270px; padding:22px; border:1px solid var(--line); border-radius:16px;
+  background:var(--card); backface-visibility:hidden; -webkit-backface-visibility:hidden;
+  display:flex; flex-direction:column; justify-content:space-between; gap:16px}
+.cq-face.back{transform:rotateY(180deg); background:var(--soft)}
+.cq-hint{font-size:.85rem; color:var(--muted)}
+.cq-ans{font:700 1.15rem/1.4 Georgia,serif; margin:0 0 8px}
+.cq-exp{margin:0; font-size:.95rem}
+.cq-nav{display:flex; align-items:center; justify-content:space-between; margin-top:16px}
+.cq-nav span{font-size:.9rem; color:var(--muted)}
+
+.cq-app button:focus-visible{outline:3px solid var(--accent); outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.cq-inner,.cq-bar i{transition:none}}
